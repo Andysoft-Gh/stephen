@@ -1,0 +1,13 @@
+{% extends 'accounts/main.html' %}
+{% block title %}Confirm Delete| Manager{% endblock title %}
+
+{% block content %}
+    <p class="alert alert-danger">Do you want to delete {{dele_ord.id}} {{dele_ord.product.product_name}} ?</p>
+<form method="POST">
+{% csrf_token %}
+    <a class="btn btn-inline btn-primary btn-block" href="#">Cancel</a>
+    <button class="btn btn-inline btn-warning btn-block">Confirm</button>
+
+</form>
+
+{% endblock content %}
